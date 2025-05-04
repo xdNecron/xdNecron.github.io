@@ -1,0 +1,10 @@
+@import "theme.css"
+
+body {
+    text-align: left;
+}
+
+article {
+    width: 900px;
+    height: 450px;
+}

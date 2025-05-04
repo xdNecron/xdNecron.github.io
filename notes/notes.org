@@ -1,0 +1,29 @@
+#+title: Personal Website
+
++[[https://trello.com/c/Bm3eAhE7/5-js-personal-website][Link na Trello kartu]]
+
+* To-Do
+SCHEDULED: <2025-05-04 Sun 19:00>
+** TODO Finalizace designu [0/3]
+- [ ] Barevná paleta
+- [ ] Font
+- [ ] Pixel Artové assety
+** TODO
+
+* O projektu
+** Popis
+Mým cílem je vytvořit si minimalistickou osobní webovku. Chtěl bych v ní zakomponovat pixel artové assety, které si sám vytvořím.
+Zároveň bych chtěl přenést minimalistické pojetí stránky i do jejího backendu. Kód by měl být co nejjednodušší za použití velmi limitovaného množství technologií.
+
+** Obsah stránky
+Stránka by měla obsahovat následující kategorie:
+
+- O mně
+- Projekty
+- Reading list
+- Odkazy na socials (v pixel artu)
+
+** Design Concepts
+HSV BG: 30.0, 3.3, 95.3
+
+[[file:Desktop - 1.png]]

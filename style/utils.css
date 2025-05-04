@@ -1,0 +1,33 @@
+/* Font Faces */
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+/* Colors */
+
+@property --bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #afbdc0;
+}
+
+@property --fg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #363636;
+}
+
+@property --active-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ffffff;
+}

@@ -1,0 +1,27 @@
+@import "utils.css";
+
+/* Global theme rules */
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: "JetBrains Mono", monospace;
+}
+
+p {
+    text-align: left;
+}
+
+article {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h1 {
+    margin: 10px 0px 20px 0px;
+    text-align: left;
+    font-size: 36px;
+    font-weight: 600;
+}
