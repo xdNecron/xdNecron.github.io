@@ -4,9 +4,9 @@
 
 * To-Do
 SCHEDULED: <2025-05-04 Sun 19:00>
-** TODO Finalizace designu [0/3]
-- [ ] Barevná paleta
-- [ ] Font
+** TODO Finalizace designu [2/3]
+- [X] Barevná paleta
+- [X] Font
 - [ ] Pixel Artové assety
 ** TODO
 

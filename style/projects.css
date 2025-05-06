@@ -1,7 +1,14 @@
-@import "theme.css"
+@import "theme.css";
 
 body {
     text-align: left;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 article {

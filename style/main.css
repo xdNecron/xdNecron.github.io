@@ -17,15 +17,25 @@
     width: 500px;
     font-size: 32px;
 
+    padding-left: 15px;
+    box-sizing: border-box;
+
     text-align: left;
     align-content: center;
 
     animation-name: fade-in;
     animation-duration: 2.0s;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+    row-gap: 40px;
 }
 
 .text p {
-    margin: 0 0 40px 15px;
+    margin: 0px;
     font-weight: 600;
 }
 
@@ -35,12 +45,55 @@
     text-decoration: none;
 
     transition: 0.2s ease-in-out;
-
 }
 
 .link:hover {
     color: var(--active-color);
     font-size: 35px;
+}
+
+.socials {
+    box-sizing: border-box;
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    column-gap: 30px;
+}
+
+.socials button {
+    background: transparent;
+    border: none;
+
+}
+
+.socials button img {
+    width: 64px;
+    height: 64px;
+    filter: none;
+
+    transition: 0.2s ease-in-out;
+}
+
+.socials button img:hover  {
+    cursor: pointer;
+}
+
+#ig img:hover {
+    transform: scale(1.15);
+    filter: invert(100%) sepia(77%) saturate(109%) hue-rotate(258deg) brightness(120%) contrast(100%);
+}
+
+#yt img:hover {
+    transform: scale(1.15);
+    filter: invert(100%) sepia(77%) saturate(109%) hue-rotate(258deg) brightness(120%) contrast(100%);
+}
+
+#tt img:hover {
+    transform: scale(1.15);
+    filter: invert(100%) sepia(77%) saturate(109%) hue-rotate(258deg) brightness(120%) contrast(100%);
 }
 
 .gallery {
@@ -61,5 +114,4 @@
     aspect-ratio: 222/278;
     box-sizing: border-box;
     object-fit: cover;
-    filter: drop-shadow(5px 3px 8px rgb(0 0 0 / 50%));
 }
