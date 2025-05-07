@@ -10,6 +10,14 @@ body {
     font-family: "JetBrains Mono", monospace;
 }
 
+#content {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 p {
     text-align: left;
     /* filter: drop-shadow(3px 3px 5px rgb(0 0 0 / 20%)); */
@@ -19,9 +27,14 @@ h1 {
     margin: 10px 0px 20px 0px;
     text-align: left;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 800;
 
     /* filter: drop-shadow(3px 3px 5px rgb(0 0 0 / 20%)); */
+}
+
+h2 {
+    margin: 0px 0px 10px 0px;
+    font-weight: 800;
 }
 
 img {
@@ -29,8 +42,9 @@ img {
 }
 
 article {
+    text-align: left;
     font-size: 18px;
     font-weight: 400;
+    width: 900px;
+    height: 450px;
 }
-
-

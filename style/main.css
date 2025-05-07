@@ -1,13 +1,6 @@
 @import "theme.css";
 @import "animations.css";
 
-#content {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .content_block {
     height: 450px;
     width: 400px;
@@ -31,7 +24,7 @@
     align-items: start;
     flex-direction: column;
 
-    row-gap: 40px;
+    row-gap: 25px;
 }
 
 .text p {
@@ -43,8 +36,6 @@
     color: var(--fg-color);
     outline-color: transparent;
     text-decoration: none;
-
-    transition: 0.2s ease-in-out;
 }
 
 .link:hover {
@@ -73,8 +64,6 @@
     width: 64px;
     height: 64px;
     filter: none;
-
-    transition: 0.2s ease-in-out;
 }
 
 .socials button img:hover  {

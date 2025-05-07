@@ -12,6 +12,12 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../assets/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+    font-weight: 800;
+}
+
 /* Colors */
 
 @property --bg-color {
@@ -36,4 +42,10 @@
 
 .drop_shadow {
     filter: drop-shadow(5px 3px 8px rgb(0 0 0 / 50%));
+}
+
+/* Transitions */
+
+.hover-1 {
+    transition: 0.2s ease-in-out;
 }
