@@ -1,4 +1,5 @@
 @import "utils.css";
+@import "animations.css";
 
 /* Global theme rules */
 
@@ -8,6 +9,10 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: "JetBrains Mono", monospace;
+
+    animation-name: fade-in;
+    animation-duration: 1.0s;
+    /* animation-delay: 0.1s; */
 }
 
 #content {
@@ -16,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 p {

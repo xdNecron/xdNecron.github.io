@@ -4,10 +4,10 @@
 
 * To-Do
 Nejprve dodělám celý content.
+** TODO Tasks [1/2]
 DEADLINE: <2025-05-07 Wed 19:00>
-** TODO Tasks [0/2]
-- [ ] Reading list
-- [ ]
+- [X] Reading list
+- [ ] JS na renderovani reading listu
 
 ** Ideas
 *** TODO Reading list: text underline animation on hover
