@@ -1,1 +1,11 @@
 @import "theme.css";
+
+a {
+    text-decoration: underline dotted;
+    color: var(--fg-color);
+}
+
+.text {
+    box-sizing: border-box;
+    padding-left: 15px;
+}
