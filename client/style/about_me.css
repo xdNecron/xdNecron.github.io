@@ -1,0 +1,6 @@
+@import "theme.css";
+
+.text {
+    box-sizing: border-box;
+    padding-left: 15px;
+}

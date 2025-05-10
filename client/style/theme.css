@@ -24,9 +24,19 @@ body {
 
 }
 
+.text {
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
 p {
     text-align: left;
     /* filter: drop-shadow(3px 3px 5px rgb(0 0 0 / 20%)); */
+}
+
+a {
+    text-decoration: none;
+    text-color: var(--fg-color);
 }
 
 h1 {
