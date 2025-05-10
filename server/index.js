@@ -1,3 +1,4 @@
+const yaml = require('yaml');
 
 // Fetch yaml file
 fetch("../data/test.json")
