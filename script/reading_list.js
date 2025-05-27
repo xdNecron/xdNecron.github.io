@@ -12,34 +12,34 @@ function getValidIdName(text) {
 function renderData(data) {
     for (const [key, category] of Object.entries(data)) {
         if (category[0] != null) {
-        let id_name = getValidIdName(key);
+            let id_name = getValidIdName(key);
 
-        const heading = article_content
-                .appendChild(document.createElement("h2"));
+            const heading = article_content
+                    .appendChild(document.createElement("h2"));
 
-        heading.innerText = key;
-        heading.id = id_name + "-h";
+            heading.innerText = key;
+            heading.id = id_name + "-h";
 
-        const list = article_content
-                .appendChild(document.createElement("ul"));
-        list.id = id_name + "-l";
+            const list = article_content
+                    .appendChild(document.createElement("ul"));
+            list.id = id_name + "-l";
 
-        for (const [key, entry] of Object.entries(category)) {
-            let name = entry.name;
-            let author = entry.author;
-            let title = entry.title;
+            for (const [key, entry] of Object.entries(category)) {
+                let name = entry.name;
+                let author = entry.author;
+                let title = entry.title;
 
-            let li_content = `<b>${author}</b> <i>${name}</i>`;
+                let li_content = `<b>${author}</b> <i>${name}</i>`;
 
-            const li = list
-                  .appendChild(document.createElement("li"))
-            li.innerHTML = li_content;
+                const li = list
+                    .appendChild(document.createElement("li"))
+                li.innerHTML = li_content;
 
-            if (title) {
-                li.setAttribute("title", title)
-            }
+                if (title) {
+                    li.setAttribute("title", title)
+                }
 
-        };
+            };
         } else {
             continue;
         };

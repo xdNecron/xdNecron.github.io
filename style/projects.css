@@ -1,1 +1,17 @@
 @import "theme.css";
+
+#text {
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    overflow: auto;
+}
+
+p {
+    margin-left: 60px;
+    margin-top: 5px;
+}
+
+h2:hover {
+    text-decoration: underline dotted;
+}

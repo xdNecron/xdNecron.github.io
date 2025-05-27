@@ -26,7 +26,6 @@ body {
 
 p {
     text-align: left;
-    /* filter: drop-shadow(3px 3px 5px rgb(0 0 0 / 20%)); */
 }
 
 h1 {
@@ -34,8 +33,6 @@ h1 {
     text-align: left;
     font-size: 36px;
     font-weight: 800;
-
-    /* filter: drop-shadow(3px 3px 5px rgb(0 0 0 / 20%)); */
 }
 
 h2 {
@@ -53,4 +50,9 @@ article {
     font-weight: 400;
     width: 900px;
     height: 450px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fg-color);
 }
