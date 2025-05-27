@@ -1,12 +1,12 @@
-import watchList from "../data/watch_list.js";
+import readingList from "../data/reading_list.js";
 
 let article = document.getElementById("content-article");
-let article_content = article.getElementsByClassName("text"); 
+let article_content = article.getElementsByClassName("text");
 
 article_content = Array.prototype.slice.call(article_content)[0];
 
 function getValidIdName(text) {
-    return text.replaceAll(/[^a-zA-z0-9]/g, "-")
+    return text.replaceAll(/[^a-zA-Z0-9]/g, "-")
 }
 
 function renderData(data) {
@@ -26,17 +26,18 @@ function renderData(data) {
 
         for (const [key, entry] of Object.entries(category)) {
             let name = entry.name;
-            let director = entry.director;
-            let link = entry.link;
+            let author = entry.author;
+            let title = entry.title;
 
-            let link_content = `<b>${director}</b> <i>${name}</i>`;
+            let li_content = `<b>${author}</b> <i>${name}</i>`;
 
-            const a = list
+            const li = list
                   .appendChild(document.createElement("li"))
-                  .appendChild(document.createElement("a"));
-            a.innerHTML = link_content;
-            a.setAttribute("href", link)
-            a.setAttribute("target", "_blank")
+            li.innerHTML = li_content;
+
+            if (title) {
+                li.setAttribute("title", title)
+            }
 
         };
         } else {
@@ -45,4 +46,4 @@ function renderData(data) {
     };
 }
 
-renderData(watchList);
+renderData(readingList);
