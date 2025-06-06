@@ -1,0 +1,90 @@
+const textDiv = document.getElementById("text");
+
+const repos = [
+  "vscode-jumper"
+];
+
+let versionTag;
+
+async function getLatestVersion(data) {
+  const res = await fetch(`${data.tags_url}`)
+    .then(json => json.json())
+    .then(data => {
+      console.log(data[0].name);
+      return data;
+    });
+  return res;
+}
+
+function renderContent(data) {
+  // create a span for each repo
+  const repoContent = textDiv.appendChild(document.createElement("span"));
+  repoContent.className = "repo-entry"
+
+  // render repo name as heading and put it inside <a>
+  const repoLink = repoContent.appendChild(document.createElement("a"));
+  repoLink.setAttribute("href", data.url);
+  repoLink.setAttribute("target", "_blank")
+
+  const repoHeading = repoContent.appendChild(document.createElement("span"));
+
+  const repoName = repoLink.appendChild(document.createElement("h2"));
+  repoName.innerText = data.name;
+
+  // render repo description
+  const desc = repoContent.appendChild(document.createElement("p"));
+  desc.innerText = data.description;
+
+  const versionTag = repoContent.appendChild(document.createElement("small"));
+  versionTag.innerText = data.tagName;
+
+  // add latest version, latest commit hash, message, and date
+  const commitHash = repoContent.appendChild(document.createElement("small"));
+  commitHash.innerText = data.commitHash.slice(0, 6);
+
+  const commitMessage = repoContent.appendChild(document.createElement("small"));
+  commitMessage.innerText = data.commitMessage;
+
+  const updateDateText = new Date(data.commitDate);
+  console.log(updateDateText)
+
+};
+
+for (const repo of repos.values()) {
+  const repoUrl = `https://api.github.com/repos/xdNecron/${repo}`
+
+  const getData = async () => {
+
+    const repoInfo = await fetch(repoUrl)
+      .then(res => res.json())
+      .then(data => {
+        return data;
+      });
+
+    const versionTag = await fetch(repoInfo.tags_url)
+      .then(res => {
+        return res.json();
+      });
+
+    const commitInfo = await fetch(`${repoUrl}/commits`)
+      .then(res => {
+        return res.json();
+      });
+
+    const repoData = {
+      "url": repoInfo.html_url,
+      "name": repoInfo.name,
+      "description": repoInfo.description,
+      "tagName": versionTag[0].name,
+      "commitHash": commitInfo[0].sha,
+      "commitMessage": commitInfo[0].commit.message,
+      "commitDate": commitInfo[0].commit.author.date
+    };
+
+    console.log(repoData);
+
+    renderContent(repoData);
+  };
+  getData();
+
+};
